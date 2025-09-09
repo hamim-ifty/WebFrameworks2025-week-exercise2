@@ -1,10 +1,20 @@
 import './App.css'
+import CourseList from './CourseList'
 
-function App() {
+interface CourseData {
+  name: string;
+  courseId: string;
+  studentPositions: number;
+}
 
+interface AppProps {
+  courses: CourseData[];
+}
+
+function App({ courses }: AppProps) {
   return (
     <>
-      <div>Week exercise 2 - Read README.md for instructions</div>
+      <CourseList courses={courses} />
     </>
   )
 }
